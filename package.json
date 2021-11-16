@@ -1,19 +1,21 @@
 {
-  "name": "littledb",
+  "name": "my-mern-app",
   "version": "1.0.0",
-  "description": "lowdb sample for 1.125",
-  "main": "index.js",
+  "description": "mern-app-heroku",
+  "main": "server.js",
   "scripts": {
-    "test": "jest",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client"
   },
-  "author": "abel@mit.edu",
-  "license": "MIT",
+  "author": "ttxxiii@gmail.com",
+  "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "lowdb": "^1.0.0",
-    "mongodb": "^3.6.2"
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.4",
+    "mongoose": "^5.10.15"
   },
   "engines": {
     "node": "14.17.1",

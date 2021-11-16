@@ -1,8 +1,8 @@
-const MongoClient = require('mongodb').MongoClient;
-const url         = 'mongodb+srv://admin:kYGq6vU8lPCrQTui@cluster0.qfhsi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const { MongoClient } = require('mongodb');
+const url         = 'mongodb+srv://admin:kYGq6vU8lPCrQTui@cluster0.qfhsi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 //const url         = 'mongodb://localhost:27017';
 let db            = null;
- 
+
 // connect to mongo
 MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
     console.log("Connected successfully to db server");
@@ -75,5 +75,5 @@ function all(){
     })
 }
 
-
+ 
 module.exports = {create, findOne, find, update, all};
